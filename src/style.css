@@ -107,7 +107,10 @@ body {
   border: none;
   outline: none;
   font-size: 1rem;
-  placeholder-color: #6b7280; /* Matches Tailwind's placeholder-gray-500 */
+  ::placeholder {
+    color: #6b7280; /* Matches Tailwind's placeholder-gray-500 */
+  }
+   /* Matches Tailwind's placeholder-gray-500 */
 }
 
 /* Submit button */
@@ -168,19 +171,20 @@ header {
 
 /* Inner container */
 header .max-w-4xl {
-  max-width: 56rem; /* max-w-4xl */
-  margin-left: auto; /* mx-auto */
-  margin-right: auto; /* mx-auto */
-  display: flex; /* flex */
-  justify-content: space-between; /* justify-between */
-  align-items: center; /* items-center */
+  max-width: 56rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Title */
 header h1 {
   font-size: 2.25rem; /* text-4xl */
-  font-weight: 700; /* font-bold */
-  color: #ffffff; /* text-white */
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
 /* Span inside title */
@@ -190,8 +194,10 @@ header h1 span {
 
 /* Paragraph */
 header p {
-  color: lightgray; /* text-gray-400 */
-  font-style: italic; /* italic */
+  color: lightgray;
+  font-style: italic;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .App {
@@ -401,7 +407,6 @@ h1 {
     padding: 8px 16px;
   }
 }
-
 
 
 
